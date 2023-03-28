@@ -1,7 +1,6 @@
-require('dotenv').config()
-console.log(process.env);
 
-let menu = document.getElementById('#menu-icon');
+
+let menu = document.getElementById('menu-icon');
 let navlist = document.querySelector('.navlist');
 
 menu.onclick = () => {
@@ -23,7 +22,7 @@ sr.reveal('.scroll-down',{delay:500, origin:'right'});
 
 // --- weather app
 
-const apiKey = process.env.API_KEY;
+const apiKey = "";
 const apiUrl = "https://api.weatherstack.com/current";
 
 const searchBox = document.querySelector(".search input");
@@ -73,45 +72,31 @@ let x = setInterval(function(){
 
 // contact form
 
- // import the SendGrid library
-const sgMail = require('@sendgrid/mail');
-
-// set your API key
-sgMail.setApiKey('');
-
-async function sendEmail() {
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-  const message = document.getElementById('message').value;
-
-  // create the email message
-  const msg = {
-    to: 'RECIPIENT_EMAIL_ADDRESS',
-    from: 'SENDER_EMAIL_ADDRESS',
-    subject: 'New Contact Form Inquiry',
-    text: `
-      Name: ${name}
-      Email: ${email}
-      Phone: ${phone}
-      Message: ${message}
-    `,
-  };
-
-  // send the email
-  try {
-    await sgMail.send(msg);
-    alert('Email sent successfully!');
-  } catch (error) {
-    console.error(error);
-
-    if (error.response) {
-      console.error(error.response.body);
-    }
-
-    alert('An error occurred while sending the email.');
-  }
+function sendEmail(){
+  Email.send({
+    Host : "smtp.gmail.com",
+    Username : "cheybabyrio@gmail.com",
+    Password : "password",
+    To : 'cheybabyrio@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert("Message Sent")
+ 
+);
 }
+ 
 
 
-  
+// word count for message box
+const textField = document.getElementById("txt");
+const wordCount = document.getElementById("wordCount");
+const clearBtn = document.getElementById("clearBtn");
+
+function countWord(){
+  let text = textField.value;
+  text=text.trim();
+  let words = text.split(" ");
+  wordCount.innerText = words.length;
+    }

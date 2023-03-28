@@ -57,6 +57,7 @@ header {
 	font-weight: 600;
 	border-bottom: 2px solid transparent;
 	transition: all .55s ease;
+	text-shadow: 0px 0px 3px #252525;
 	
 }
 .navlist a:hover{
@@ -68,7 +69,7 @@ header {
 	z-index: 10001;
 	cursor: pointer;
 	display: none;
-	text-shadow: 0px 0px 2px #2d2d2d5a;
+	text-shadow: 0px 0px 2px #00000052;
 }
 
 .hero{
@@ -247,7 +248,7 @@ section{
 .card {
 	width: 90%;
 	max-width: 470px;
-	height: 70vh;
+	height: 50vh;
 	background: linear-gradient(90deg, rgba(101, 213, 251, 0.672) 0%, rgba(23, 244, 215, 0.664) 50%, rgb(221, 242, 115) 100%);
 	-webkit-box-shadow:0px 6px 9px 3px rgba(62,66,66,0.21);
 	-moz-box-shadow: 0px 6px 9px 3px rgba(62,66,66,0.21);
@@ -257,7 +258,7 @@ section{
 	border-radius: 20px;
 	padding: 40px 35px;
 	text-align: center;
-	margin-bottom: 100px;
+	margin-bottom: 250px;
 }
 
 .search {
@@ -350,7 +351,7 @@ section{
 /* about ----*/
 
 .about-container {
-	height: 90vh;
+	height: 40vh;
 }
 
 .about-content {
@@ -503,7 +504,6 @@ form button {
 		right: -100%;
 		width: 400px;
 		height: 100vh;
-		background-color: pink;
     	
 		
 		display: flex;
@@ -517,6 +517,7 @@ form button {
 		display: block;
 		margin: 7px 0;
 		font-size: 30px;
+		
 	}
 	.navlist.open{
 		right: 0;
