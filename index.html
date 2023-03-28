@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>16th Avenue Blooms</title>
+
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	
+	<link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+	
+</head>
+<body>
+
+	<header id="nav-logo">
+		<a href="#" class="logo">16th Ave Blooms</a>
+		<ul class="navlist">
+			<li><a href="#">Home</a></li>
+			<li><a href="#about-section">About</a></li>
+			<li><a href="#weather-section">Weather</a></li>
+			<li><a href="#contact-section">Contact</a></li>
+		</ul>
+
+		<div class="bx bx-menu" id="menu-icon"></div>
+	</header>
+
+	<section class="hero">
+		<div class="hero-text">
+			<h1>Spring Savings!</h1>
+			<p>Step into Spring with these blooming deals! 16th Ave is offering a number of classes at half price this spring to get your garden off on the right foot!</p>
+			<a href="#">Learn More</a>
+			<a href="#" class="ctaa"><i class="ri-play-fill"></i>Shop Now</a>
+		</div>
+
+		<div class="hero-img">
+			<img src="img/tulip 2.png">
+		</div>
+	</section>
+
+	<section class="countdown">
+		<div id="cd-title">
+			<h1>Countdown to Summer</h1>
+		</div>
+		<div class="launch-time">
+			
+			<div>
+				<p id="days">00</p>
+				<span>Days</span>
+			</div>
+			<div>
+				<p id="hours">00</p>
+				<span>Hours</span>
+			</div>
+			<div>
+				<p id="minutes">00</p>
+				<span>Minutes</span>
+			</div>
+			<div>
+				<p id="seconds">00</p>
+				<span>Seconds</span>
+			</div>
+	</section>
+<section>
+	<div class="card" id="weather-section">
+		<div class="search">
+			<input type="text" placeholder="Search..." spellcheck="false">
+			<button><img src="img/search.png" alt="Search Button"></button>
+		</div>
+		<div class="weather">
+			<img src="" class="weather-icon">
+			<h1 class="temp"></h1>
+			<h2 class="city"></h2>
+			
+			<div class="details">
+				
+				<div class="col">
+				<img src="img/humidity.png">
+				<div>
+					<p class="humidity"></p>
+					<p>Humidity</p>
+				</div>
+				
+				<div class="col">
+					<img src="img/wind.png">
+					<div>
+						<p class="wind"></p>
+						<p>Wind Speed</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>	  
+
+
+	<div class="icons">
+		<a href="#"><i class="ri-instagram-line"></i></a>
+		<a href="#"><i class="ri-youtube-line"></i></a>
+		<a href="#"><i class="ri-twitter-line"></i></a>
+	</div>
+
+	<div class="scroll-down">
+		<a href="#"><i class="ri-arrow-down-s-fill"></i></a>
+	</div>
+
+	<section id="about-section">
+		<div class="about-container">
+			<div class="about-content">
+				<img src="/img/garden.jpg">
+				<h1>Our Vision</h1>
+				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="container" id="contact-section">
+		<form class="contact-form" onsubmit="sendEmail(); reset(); return false;">
+			<h3>Get In Touch!</h3>
+			<input type="text" id="name" placeholder="Name *" required>
+			
+			<input type="email" id="email" placeholder="Email *" required>
+			
+			<input type="number" id="phone" placeholder="Phone Number (Optional)" >
+			
+			<textarea id="message" rows="4" placeholder="Message..."></textarea>
+			
+			<button type="submit">Send message</button>
+			
+		</form>
+	</section>
+	
+	
+	<script src="https://smtpjs.com/v3/smtp.js">
+	</script>
+
+
+	<!---scrollreveal effect--->
+	<script src="https://unpkg.com/scrollreveal"></script>
+
+	<!---custom js link--->
+	<script src="js/script.js"></script>
+
+</body>
+</html>
