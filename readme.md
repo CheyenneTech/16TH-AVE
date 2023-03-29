@@ -9,7 +9,6 @@ The third feature is to search for the weather in any defined city. The temp wil
 
 
 
-My fourth feature is a chatbot http://developer.simsimi.com/api chat bot?
 
 
 
