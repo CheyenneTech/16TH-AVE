@@ -45,12 +45,14 @@ header {
 .navlist{
 	display: flex;
 	text-transform: uppercase;
-	
-	
-	
 }
-.navlist a {
+
 	
+	
+
+.navlist a {
+	background-color: rgba(251, 253, 251, 0);
+	backdrop-filter: blur(50px);
 	color: white;
 	margin-left: 60px;
 	font-size: 15px;
@@ -61,7 +63,7 @@ header {
 	
 }
 .navlist a:hover{
-	border-bottom: 2px solid pnk;
+	border-bottom: 2px solid pink;
 }
 #menu-icon{
 	color: pink;
@@ -351,7 +353,7 @@ section{
 /* about ----*/
 
 .about-container {
-	height: 40vh;
+	height: 70vh;
 }
 
 .about-content {
@@ -359,6 +361,8 @@ section{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin: 60px;
+	
 }
 
 .about-content img {
@@ -504,7 +508,6 @@ form button {
 		right: -100%;
 		width: 400px;
 		height: 100vh;
-    	
 		
 		display: flex;
 		align-items: center;
@@ -512,15 +515,28 @@ form button {
 		padding: 50px 20px;
 		transition: all .55s ease;
 	}
+
+	
 	.navlist a{
 		margin-left: 0;
 		display: block;
 		margin: 7px 0;
 		font-size: 30px;
 		
+		
+		
+	}
+
+	.navlist a:hover {
+		color: rgb(141, 216, 166);
 	}
 	.navlist.open{
 		right: 0;
+		background-color: rgba(255, 192, 203, 0.844);
+		border-radius: 10px;
+		-webkit-box-shadow:0px 6px 9px 3px rgba(62,66,66,0.21);
+		-moz-box-shadow: 0px 6px 9px 3px rgba(62,66,66,0.21);
+		box-shadow: 0px 6px 9px 3px rgba(62,66,66,0.21);
 	}
 }
 
