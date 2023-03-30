@@ -23,9 +23,8 @@ sr.reveal('.icons',{delay:500, origin:'left'});
 sr.reveal('.scroll-down',{delay:500, origin:'right'});
 
 // --- weather app
-
-const apiKey = "";
-const apiUrl = "https://api.weatherstack.com/current";
+const apiUrl = "https://api.weatherstack.com/current?access_key=${process.env.WEATHER_API_KEY}&query=${searchtext}"
+const apiKey ="process.env.WEATHER_API_KEY"
 
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
@@ -40,12 +39,8 @@ async function checkWeather(cityName) {
   const data = await response.json();
   console.log(data);
 
-  // Update HTML with weather data
-  weatherIcon.src = data.current.weather_icons[0];
-  city.textContent = data.location.name;
-  temp.textContent = data.current.temperature + "°C";
-  humidity.textContent = data.current.humidity + "%";
-  wind.textContent = data.current.wind_speed + " mph";
+  
+  
 }
 
 searchBtn.addEventListener("click", () => {
