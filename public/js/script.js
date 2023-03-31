@@ -45,7 +45,7 @@ async function checkWeather(cityName) {
   city.textContent = data.name;
   temp.textContent = `${Math.round(data.main.temp)}°F`;
   humidity.textContent = `${data.main.humidity}%`;
-  wind.textContent = `${data.wind.speed} mph`;
+  wind.textContent = `${Math.round(data.wind.speed)} mph`;
 }
 
 searchBtn.addEventListener("click", () => {
