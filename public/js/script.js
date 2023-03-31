@@ -35,7 +35,7 @@ const humidity = document.querySelector(".humidity");
 const wind = document.querySelector(".wind");
 
 async function checkWeather(cityName) {
-  const response = await fetch(`${apiUrl}?q=${cityName}&appid=${apiKey}&units=metric`);
+  const response = await fetch(`${apiUrl}?q=${cityName}&appid=${apiKey}&units=imperial`);
   const data = await response.json();
   console.log(data);
   
@@ -43,9 +43,9 @@ async function checkWeather(cityName) {
   const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
   weatherIcon.src = iconUrl;
   city.textContent = data.name;
-  temp.textContent = `${data.main.temp}°C`;
+  temp.textContent = `${Math.round(data.main.temp)}°F`;
   humidity.textContent = `${data.main.humidity}%`;
-  wind.textContent = `${data.wind.speed} m/s`;
+  wind.textContent = `${data.wind.speed} mph`;
 }
 
 searchBtn.addEventListener("click", () => {

@@ -253,7 +253,7 @@ section{
 	width: 100%;
 	max-width: 470px;
 	min-width: 400px;
-	height: 50vh;
+	height: 70vh;
 	background: rgb(194,155,182);
 	background: linear-gradient(0deg, rgba(194,155,182,0.774712643678161) 0%, rgba(242,232,230,1) 100%);
 	-webkit-box-shadow:0px 6px 9px 3px rgba(62,66,66,0.21);
@@ -264,7 +264,8 @@ section{
 	border-radius: 20px;
 	padding: 40px 35px;
 	text-align: center;
-	margin-bottom: 250px;
+	margin-bottom: 200px;
+	
 	
 }
 
