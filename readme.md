@@ -10,7 +10,7 @@ My first feature is a word count connected to my contact form. The contact form 
 The second feature on my page is the countdown date to summer. This is located below the hero section.
 
 
-The third feature is to search for the weather in any defined city. The temp will show as celsius and it will also display the wind speed and humidity as well as a weather icon of the current weather. For this, you will need the API key from me to function at this time. 
+The third feature is to search for the weather in any defined city. The temp will show as fahrenheit and it will also display the wind speed and humidity as well as a weather icon of the current weather. For this, you will need the API key from me to function at this time. 
 
 
 
