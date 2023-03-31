@@ -23,8 +23,8 @@ sr.reveal('.icons',{delay:500, origin:'left'});
 sr.reveal('.scroll-down',{delay:500, origin:'right'});
 
 // --- weather app
-const apiUrl = "https://api.weatherstack.com/current?access_key=${process.env.WEATHER_API_KEY}&query=${searchtext}"
-const apiKey ="process.env.WEATHER_API_KEY"
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
+const apiKey = "";
 
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
@@ -35,17 +35,24 @@ const humidity = document.querySelector(".humidity");
 const wind = document.querySelector(".wind");
 
 async function checkWeather(cityName) {
-  const response = await fetch(`${apiUrl}?access_key=${apiKey}&query=${cityName}`);
+  const response = await fetch(`${apiUrl}?q=${cityName}&appid=${apiKey}&units=metric`);
   const data = await response.json();
   console.log(data);
-
   
-  
+  // Update HTML with weather data
+  const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+  weatherIcon.src = iconUrl;
+  city.textContent = data.name;
+  temp.textContent = `${data.main.temp}°C`;
+  humidity.textContent = `${data.main.humidity}%`;
+  wind.textContent = `${data.wind.speed} m/s`;
 }
 
 searchBtn.addEventListener("click", () => {
   checkWeather(searchBox.value);
 });
+
+
 
 // --- countdown timer
 
